@@ -14,6 +14,14 @@ namespace SpecFlow.Example.Localization
             Assert.AreEqual(1050.1, Convert.ToDouble("1.050,1", CultureInfo.GetCultureInfo("de-AT")));
             Assert.AreEqual(1050.1, Convert.ToDouble("1'050.1", CultureInfo.GetCultureInfo("de-CH")));
         }
+	    
+    	[Test]
+        public void ConvertStringToDouble_Exploration1()
+        {
+            Assert.AreEqual(1050.1, Convert.ToDouble("1,050.1", CultureInfo.GetCultureInfo("en-US")));
+            Assert.AreEqual(1050.1, Convert.ToDouble("1.050,1", CultureInfo.GetCultureInfo("de-AT")));
+            Assert.AreEqual(1050.1, Convert.ToDouble("1'050.1", CultureInfo.GetCultureInfo("de-CH")));
+        }
 		
     }
 }
